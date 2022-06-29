@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
-// import { signIn, signOut, useSession } from "next-auth/react";
-import { useSession } from "next-auth/react";
+import { signIn, signOut, useSession } from "next-auth/react";
+// import { useSession } from "next-auth/react";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
@@ -24,7 +24,7 @@ const Home: NextPage = () => {
           Get started by editing{" "}
           <code className={styles.code}>pages/index.tsx</code>
         </p>
-        {/* <button
+        <button
           onClick={(e) => {
             e.preventDefault();
             signIn();
@@ -39,7 +39,7 @@ const Home: NextPage = () => {
           }}
         >
           Sign out
-        </button> */}
+        </button>
         <h3>This is current session data:</h3>
         <pre>{JSON.stringify(sessionData, null, 2)}</pre>
 

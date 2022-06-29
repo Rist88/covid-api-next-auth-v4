@@ -58,12 +58,12 @@ export const authOptions: NextAuthOptions = {
   theme: {
     colorScheme: "light",
   },
-  // callbacks: {
-  //   async jwt({ token }) {
-  //     token.userRole = "admin";
-  //     return token;
-  //   },
-  // },
+  callbacks: {
+    async jwt({ token }) {
+      token.userRole = "admin";
+      return token;
+    },
+  },
 };
 
 // // export default NextAuth(authOptions);
